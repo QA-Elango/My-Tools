@@ -46,7 +46,7 @@ public class IND_GST_Advantage {
 	    	setUp();
 	    	driver.get("https://demo.botaiml.com/inbot/ChatBOT/inbot.html");
 
-	        String excelFilePath = "C:\\Users\\sysadmin\\eclipse-workspace\\Signup\\Integrating with jenkins\\Test data\\Gst.xlsx";
+	        String excelFilePath = "C:\\Users\\sysadmin\\eclipse-workspace\\Signup\\Integrating with jenkins\\Test data\\Gst.xlsx"; //file path
 	        FileInputStream fis = new FileInputStream(excelFilePath);
 	        Workbook workbook = new XSSFWorkbook(fis);
 	        Sheet sheet = (Sheet) workbook.getSheetAt(0);
