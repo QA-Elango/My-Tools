@@ -1,0 +1,252 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww24160\viewh12420\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\sl336\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs48 \cf0 Inheritance\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+class Selenium \{\
+    public void Testing() \{\
+        System.out.println("Testing with normal tool");\
+    \}\
+\}\
+\
+class TestNg extends Selenium \{\
+    public void Testing_web() \{\
+        System.out.println("Testing Web application");\
+    \}\
+\
+    public static void main(String[] args) \{\
+        TestNg test = new TestNg();\
+        test.Testing_web();\
+    \}\
+\}\
+\
+\
+\
+Method over loading\
+\
+ \
+\pard\pardeftab720\partightenfactor0
+\cf0 class method_overloading \{\
+    public static int add(int x, int y) \{\
+        return x + y;\
+    \}\
+\
+    public static double add(double x, double y) \{\
+        return x + y;\
+    \}\
+\
+    public static void main(String[] args) \{\
+        int num1 = 8, num2 = 1;\
+        double num3 = 9.1, num4 = 1.0;\
+\
+        System.out.println("int: " + add(num1, num2));\
+        System.out.println("double: " + add(num3, num4));\
+    \}\
+\}\
+\
+Constructor\
+\
+class Constructor \{\
+    public Constructor() \{\
+        System.out.println("Constructor called");\
+    \}\
+\
+    public static void main(String[] args) \{\
+        Constructor obj = new Constructor();\
+        System.out.println(obj);\
+    \}\
+\}\
+\
+Parameterised  Constructor\
+\
+class Check \{\
+    String name;\
+    int id;\
+\
+    public Check(int n, String s) \{\
+        id = n;\
+        name = s;\
+    \}\
+\
+    public void display() \{\
+        System.out.println(id + " " + name);\
+    \}\
+\
+    public static void main(String[] args) \{\
+        Check T1 = new Check(8, "Hello");\
+        Check T2 = new Check(9, "Hi");\
+\
+        T1.display();\
+        T2.display();\
+    \}\
+\}\
+\
+\
+1. Reversing String\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 class Reverse\{\
+public static void  main(String[] args)\{\
+ String  text ="Elango";\
+ String reversedText = "";	\
+for(int i = 0;i < text.length();i++) \{\
+	\
+	reversedText = text.charAt(i) + reversedText ;\
+\}\
+ System.out.println("Reversed :" + reversedText);\
+\}\
+\}\
+\
+\
+Advanced \
+\
+ import java.util.Scanner;\
+class Reverse\{\
+public static void  main(String[] args)\{\
+    Scanner s = new Scanner(System.in);\
+    System.out.println(" Enter the text to reverse : ");\
+ String  text1 =s.nextLine();\
+ String text = text1.toUpperCase();\
+ String reversedText = "";	\
+for(int i = 0;i < text.length();i++) \{\
+	\
+	reversedText = text.charAt(i) + reversedText ;\
+\}\
+ System.out.println("Reversed :" + reversedText);\
+\}\
+\}\
+\
+\
+\
+\
+Swapping between two number \
+\
+class swap\{\
+  public  static void main (String[] args)\{   \
+      int x = 20;\
+      int y = 10;\
+      System.out.println(" Before Swaping x and y "+ x +" "+y);\
+      x=x+y;\
+      y=x-y;\
+      x=x-y;\
+      System.out.println("After Swapping x and y " + x +" "+ y);\
+  \}\
+\}\
+\
+Advanced \
+\
+ import java.util.Scanner;\
+class swap\{\
+  public  static void main (String[] args)\{\
+      Scanner number1= new Scanner(System.in);\
+    \
+     Scanner number2 = new Scanner(System.in);\
+       System.out.println("Enter the number 1 ");\
+       System.out.println("Enter the number 2 :");\
+      int x = number1.nextInt();\
+      int y = number2.nextInt();\
+      System.out.println(" Before Swaping x and y "+ x +" "+y);\
+      x=x+y;\
+      y=x-y;\
+      x=x-y;\
+      System.out.println("After Swapping x and y " + x +" "+ y);\
+  \}\
+\}\
+\
+\
+Finding vowels\
+\
+\
+\
+class Findingvowels\{\
+    public static void main(String[] args)\{\
+        String  Upper_text = "HI WELCOME";\
+        String text= Upper_text.toLowerCase();\
+        for (int i = 0;i<text.length();i++)\{\
+            if(text.charAt(i)=='a'||text.charAt(i)=='e'||text.charAt(i)=='i'||text.charAt(i)=='o'||text.charAt(i)=='u')\{\
+                System.out.println("Given String contains Vowels "+ text.charAt(i) + " index of " + i);\
+            \}\
+            \}\
+            \}\
+        \}\
+\
+\
+With Scanner \
+\
+import java.util.Scanner;  \
+  \
+class Findingvowels\{\
+    public static void main(String[] args)\{\
+        Scanner s = new Scanner(System.in);\
+        System.out.print("ENter the test :");\
+        String  Upper_text = s.nextLine();\
+        String text= Upper_text.toLowerCase();\
+        for (int i = 0;i<text.length();i++)\{\
+            if(text.charAt(i)=='a'||text.charAt(i)=='e'||text.charAt(i)=='i'||text.charAt(i)=='o'||text.charAt(i)=='u')\{\
+                System.out.println("Given String contains Vowels "+ text.charAt(i) + " index of " + i);\
+            \}\
+            \}\
+            \}\
+        \}\
+\
+\
+\
+import java.util.Scanner; \
+\
+\
+class Primecheck \{\
+    public static void main(String[] args) \{\
+        Scanner s = new Scanner(System.in);\
+        System.out.print("Enter the number :");\
+         int n= s.nextInt();\
+         \
+         int p =n%2;\
+         boolean Text = false;\
+          System.out.println(p); \
+          for(int i=1;i<=p;++i)\{\
+         if (p==0)\{\
+                 Text =true;\
+                 break;\
+             \}\
+             if(!false)\{\
+             System.out.println("Its Prime number");\
+          \}else\{\
+            System.out.println("Its not prime number");\
+         \}\
+            \
+    \}\
+    \}\
+\}\
+\
+\
+\
+\
+class Primecheck \{\
+    public static void main(String[] args) \{\
+         int n = 3;\
+         int p =n%2;\
+         boolean Text = false;\
+          System.out.println(p); \
+          for(int i=1;i<=p;++i)\{\
+         if (p==0)\{\
+                 Text =true;\
+                 break;\
+             \}\
+             if(!false)\{\
+             System.out.println("Its Prime number");\
+          \}else\{\
+            System.out.println("Its not prime number");\
+         \}\
+            \
+    \}\
+    \
+\
+\
+\
+}
